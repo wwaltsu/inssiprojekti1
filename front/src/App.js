@@ -56,7 +56,7 @@ const App = () => {
       <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
       <TableBody>
-      {foods.map(food => {
+      {foods.slice(0,5).map(food => {
         return (
           <StyledTableRow key={food.title}>
          <StyledTableCell component="th" scope="row">
