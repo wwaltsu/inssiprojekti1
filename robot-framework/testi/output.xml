@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.4 on win32)" generated="20221023 15:36:37.949" rpa="false" schemaversion="3">
+<suite id="s1" name="Testi" source="C:\Users\walru\OneDrive\Työpöytä\robot-framework\testi">
+<suite id="s1-s1" name="Hello" source="C:\Users\walru\OneDrive\Työpöytä\robot-framework\testi\hello.robot">
+<test id="s1-s1-t1" name="Example Test" line="11">
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20221023 15:36:39.613" level="INFO">Successfully initialized new page object and opened url: localhost:3000</msg>
+<msg timestamp="20221023 15:36:39.613" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20221023 15:36:38.682" endtime="20221023 15:36:39.613"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>p</arg>
+<arg>==</arg>
+<arg>11,30€</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20221023 15:36:41.004" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221023 15:36:41.004" level="FAIL">Error: locator.elementHandle: Error: strict mode violation: "p" resolved to 45 elements:
+    1) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Buffet 11,30 €") &gt;&gt; nth=0")
+    2) &lt;p&gt;Meksikolainen kasvispihvi (A, L, M, VS) Lime-yrtt…&lt;/p&gt; aka playwright.$("text=Meksikolainen kasvispihvi (A, L, M, VS) Lime-yrttimajoneesia (ILM, A, G, L, M, V")
+    3) &lt;p&gt;Broileri kirsikatom.pestopasta&lt;/p&gt; aka playwright.$("text=Broileri kirsikatom.pestopasta")
+    4) &lt;p&gt;Jauhelihapyöryköitä thaimaalaisittain (A, L, M, V…&lt;/p&gt; aka playwright.$("text=Jauhelihapyöryköitä thaimaalaisittain (A, L, M, VS)Chili-kardemummaperunoita (IL")
+    5) &lt;p&gt;Paahdettua punajuurta (G, L, M, Veg)&lt;/p&gt; aka playwright.$("text=Paahdettua punajuurta (G, L, M, Veg)")
+    6) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Keittolounas salaatin kera 9,30 € (sis. leipäpöytä sekä jälkiruoka ja kahvi/tee)") &gt;&gt; nth=0")
+    7) &lt;p&gt;Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis…&lt;/p&gt; aka playwright.$("text=Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis-auringonkukansiemencrumblea (A")
+    8) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:nth-child(8) &gt;&gt; nth=0")
+    9) &lt;p&gt;Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paaht…&lt;/p&gt; aka playwright.$("text=Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paahtimon kahvi sekä tee")
+    10) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Buffet 11,30 €") &gt;&gt; nth=1")
+    ...
+
+=========================== logs ===========================
+waiting for selector "p"
+  strict mode violation: "p" resolved to 45 elements:
+    1) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Buffet 11,30 €") &gt;&gt; nth=0")
+    2) &lt;p&gt;Meksikolainen kasvispihvi (A, L, M, VS) Lime-yrtt…&lt;/p&gt; aka playwright.$("text=Meksikolainen kasvispihvi (A, L, M, VS) Lime-yrttimajoneesia (ILM, A, G, L, M, V")
+    3) &lt;p&gt;Broileri kirsikatom.pestopasta&lt;/p&gt; aka playwright.$("text=Broileri kirsikatom.pestopasta")
+    4) &lt;p&gt;Jauhelihapyöryköitä thaimaalaisittain (A, L, M, V…&lt;/p&gt; aka playwright.$("text=Jauhelihapyöryköitä thaimaalaisittain (A, L, M, VS)Chili-kardemummaperunoita (IL")
+    5) &lt;p&gt;Paahdettua punajuurta (G, L, M, Veg)&lt;/p&gt; aka playwright.$("text=Paahdettua punajuurta (G, L, M, Veg)")
+    6) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Keittolounas salaatin kera 9,30 € (sis. leipäpöytä sekä jälkiruoka ja kahvi/tee)") &gt;&gt; nth=0")
+    7) &lt;p&gt;Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis…&lt;/p&gt; aka playwright.$("text=Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis-auringonkukansiemencrumblea (A")
+    8) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:nth-child(8) &gt;&gt; nth=0")
+    9) &lt;p&gt;Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paaht…&lt;/p&gt; aka playwright.$("text=Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paahtimon kahvi sekä tee")
+    10) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Buffet 11,30 €") &gt;&gt; nth=1")
+    ...
+
+============================================================</msg>
+<status status="FAIL" starttime="20221023 15:36:39.614" endtime="20221023 15:36:41.006"/>
+</kw>
+<status status="FAIL" starttime="20221023 15:36:38.680" endtime="20221023 15:36:41.007">Error: locator.elementHandle: Error: strict mode violation: "p" resolved to 45 elements:
+    1) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Buffet 11,30 €") &gt;&gt; nth=0")
+    2) &lt;p&gt;Meksikolainen kasvispihvi (A, L, M, VS) Lime-yrtt…&lt;/p&gt; aka playwright.$("text=Meksikolainen kasvispihvi (A, L, M, VS) Lime-yrttimajoneesia (ILM, A, G, L, M, V")
+    3) &lt;p&gt;Broileri kirsikatom.pestopasta&lt;/p&gt; aka playwright.$("text=Broileri kirsikatom.pestopasta")
+    4) &lt;p&gt;Jauhelihapyöryköitä thaimaalaisittain (A, L, M, V…&lt;/p&gt; aka playwright.$("text=Jauhelihapyöryköitä thaimaalaisittain (A, L, M, VS)Chili-kardemummaperunoita (IL")
+    5) &lt;p&gt;Paahdettua punajuurta (G, L, M, Veg)&lt;/p&gt; aka playwright.$("text=Paahdettua punajuurta (G, L, M, Veg)")
+    6) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Keittolounas salaatin kera 9,30 € (sis. leipäpöytä sekä jälkiruoka ja kahvi/tee)") &gt;&gt; nth=0")
+    7) &lt;p&gt;Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis…&lt;/p&gt; aka playwright.$("text=Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis-auringonkukansiemencrumblea (A")
+    8) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:nth-child(8) &gt;&gt; nth=0")
+    9) &lt;p&gt;Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paaht…&lt;/p&gt; aka playwr...
+    [ Message content over the limit has been removed. ]
+    3) &lt;p&gt;Broileri kirsikatom.pestopasta&lt;/p&gt; aka playwright.$("text=Broileri kirsikatom.pestopasta")
+    4) &lt;p&gt;Jauhelihapyöryköitä thaimaalaisittain (A, L, M, V…&lt;/p&gt; aka playwright.$("text=Jauhelihapyöryköitä thaimaalaisittain (A, L, M, VS)Chili-kardemummaperunoita (IL")
+    5) &lt;p&gt;Paahdettua punajuurta (G, L, M, Veg)&lt;/p&gt; aka playwright.$("text=Paahdettua punajuurta (G, L, M, Veg)")
+    6) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Keittolounas salaatin kera 9,30 € (sis. leipäpöytä sekä jälkiruoka ja kahvi/tee)") &gt;&gt; nth=0")
+    7) &lt;p&gt;Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis…&lt;/p&gt; aka playwright.$("text=Parsakaalisosekeittoa (ILM, A, G, L, M, Veg) Ruis-auringonkukansiemencrumblea (A")
+    8) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:nth-child(8) &gt;&gt; nth=0")
+    9) &lt;p&gt;Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paaht…&lt;/p&gt; aka playwright.$("text=Mustikkarahkaa (A, G, L) ja Johan &amp; Nyström paahtimon kahvi sekä tee")
+    10) &lt;p&gt;…&lt;/p&gt; aka playwright.$("p:has-text("Buffet 11,30 €") &gt;&gt; nth=1")
+    ...
+
+============================================================</status>
+</test>
+<doc>Buffetin olisi tarkoitus näyttää hinnaksi 11,30€</doc>
+<status status="FAIL" starttime="20221023 15:36:37.971" endtime="20221023 15:36:41.034"/>
+</suite>
+<status status="FAIL" starttime="20221023 15:36:37.951" endtime="20221023 15:36:41.039"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testi">Testi</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Hello">Testi.Hello</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
