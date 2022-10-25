@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.4 on win32)" generated="20221023 22:44:29.967" rpa="false" schemaversion="3">
+<suite id="s1" name="Inssiprojekti1" source="C:\Users\walru\inssiprojekti1">
+<suite id="s1-s1" name="Robot-Framework" source="C:\Users\walru\inssiprojekti1\robot-framework">
+<suite id="s1-s1-s1" name="Testi" source="C:\Users\walru\inssiprojekti1\robot-framework\testi">
+<suite id="s1-s1-s1-s1" name="Hello" source="C:\Users\walru\inssiprojekti1\robot-framework\testi\hello.robot">
+<test id="s1-s1-s1-s1-t1" name="Example Test" line="10">
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20221023 22:44:31.747" level="INFO">Successfully initialized new page object and opened url: localhost:3000</msg>
+<msg timestamp="20221023 22:44:31.747" level="INFO">No browser and context was open. New browser and context was automatically opened when page is created.</msg>
+<status status="PASS" starttime="20221023 22:44:30.779" endtime="20221023 22:44:31.748"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${hinta}</var>
+<arg>//*[@id="root"]/div/div/table/tbody/tr[2]/td/p[1]/strong</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20221023 22:44:32.011" level="INFO">${hinta} = Buffet 11,30 €</msg>
+<status status="PASS" starttime="20221023 22:44:31.748" endtime="20221023 22:44:32.011"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${hinta}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221023 22:44:32.011" level="INFO">Buffet 11,30 €</msg>
+<status status="PASS" starttime="20221023 22:44:32.011" endtime="20221023 22:44:32.011"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${hinta}</arg>
+<arg>Buffet 11,30 €</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221023 22:44:32.012" endtime="20221023 22:44:32.012"/>
+</kw>
+<status status="PASS" starttime="20221023 22:44:30.776" endtime="20221023 22:44:32.013"/>
+</test>
+<doc>Buffetin olisi tarkoitus näyttää hinnaksi 11,30€</doc>
+<status status="PASS" starttime="20221023 22:44:30.027" endtime="20221023 22:44:32.053"/>
+</suite>
+<status status="PASS" starttime="20221023 22:44:30.024" endtime="20221023 22:44:32.057"/>
+</suite>
+<status status="PASS" starttime="20221023 22:44:30.020" endtime="20221023 22:44:32.059"/>
+</suite>
+<status status="PASS" starttime="20221023 22:44:29.997" endtime="20221023 22:44:32.061"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Inssiprojekti1">Inssiprojekti1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot-Framework">Inssiprojekti1.Robot-Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Testi">Inssiprojekti1.Robot-Framework.Testi</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Hello">Inssiprojekti1.Robot-Framework.Testi.Hello</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
